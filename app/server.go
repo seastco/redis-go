@@ -84,6 +84,6 @@ func handleGetCommand(conn net.Conn, args []Value, storage *Storage) {
     if found {
         conn.Write([]byte(fmt.Sprintf("$%d\r\n%s\r\n", len(value), value)))
     } else {
-   	    conn.Write([]byte("$-1\r\n"))
+        conn.Write([]byte("$-1\r\n"))
     }
 }
